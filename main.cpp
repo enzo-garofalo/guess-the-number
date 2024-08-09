@@ -21,9 +21,9 @@ int main() {
 	num = gerar_num();
 	tentativas = 10;
 				  
-	printf("\n=============================");
-	printf("\n=         Bem vindo         =");
-	printf("\n=============================\n");
+	printf("\n=================================================");
+	printf("\n=                  Bem vindo                    =");
+	printf("\n=================================================\n");
 	
 	while (tentativas > 0)
 	{
@@ -31,16 +31,17 @@ int main() {
 		for(int i = 0; i <= (10-tentativas); i++){
 			std::cout << valores[i] << " | ";
 		}
+		printf("\n-------------------------------------------------");
 		std::cout << "\nDigite um Numero: ";
 		std::cin >> chute;
-		printf("-------------------------------------------------");
+		printf("\n-------------------------------------------------");
 		if (chute == num)
 		{
 			acertou = true;
 			tentativas = 0;
-			printf("\n=============================");
-			printf("\n=          Acertou!         =");
-			printf("\n=============================");
+			printf("=================================================\n");
+			printf("=                    Acertou!                   =");
+			printf("=================================================");
 		}
 		else
 		{
@@ -56,7 +57,6 @@ int main() {
 				std::cout << "\nO numero eh maior que " << chute;
 			}
 			std::cout << "\nVoce tem " << tentativas << " tentativas"<<std::endl;
-			printf("-------------------------------------------------\n");
 		}
 		if(tentativas == 0 && acertou == false){
 			std::cout << "\nO numero eh igual a " << num;
